@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elivince M. Timbas is a Flutter developer in Quezon City, building cross-platform healthcare apps with BLoC, Clean Architecture, and Go.">
+  <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12100F" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elivince M. Timbas — Flutter Developer">
+  <meta property="og:description" content="Cross-platform apps. Thoughtful architecture. Explore Elivince’s Flutter, healthcare, and web development work.">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <meta name="apple-mobile-web-app-title" content="Elivince Timbas">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" href="favicon.png">
   <link rel="manifest" href="manifest.json">
+  <title>Elivince M. Timbas — Flutter Developer</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #FAFAF9; --text: #1C1917; --muted: #57534E; --accent: #0F766E; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #12100F; --text: #EDEAE7; --muted: #A8A29E; --accent: #2DD4BF; } }
+    body { margin: 0; background: var(--bg); color: var(--text); }
+    #portfolio-fallback { max-width: 680px; margin: 0 auto; padding: 96px 24px; font: 16px/1.7 system-ui, sans-serif; }
+    #portfolio-fallback h1 { font-size: clamp(32px, 6vw, 56px); line-height: 1.1; letter-spacing: -1.5px; }
+    #portfolio-fallback p { color: var(--muted); }
+    #portfolio-fallback a { color: var(--accent); display: inline-block; padding: 12px 0; margin-right: 24px; }
+    #portfolio-fallback .eyebrow { font: 12px/1.5 monospace; letter-spacing: 1.6px; text-transform: uppercase; }
+  </style>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
+  <main id="portfolio-fallback">
+    <p class="eyebrow">Open to opportunities · Quezon City, Philippines</p>
+    <h1>Elivince M. Timbas</h1>
+    <h2>Flutter Developer</h2>
+    <p>I build cross-platform healthcare apps with Flutter, BLoC, and Clean Architecture, backed by Go services. My work includes Lifesaver for Family, Lifesaver for Doctors, the SRRV website, and Food-Tripid.</p>
+    <p>Flutter Mobile Developer at Lifesaver Medicords since March 2025. BS Information Technology, Bicol University, 2024 — Cum Laude.</p>
+    <p>Skills: Dart, Flutter, BLoC, Dio, Sqflite, Go, Gin, GORM, REST APIs, MySQL, Firebase, Supabase, React, Next.js, and PostgreSQL.</p>
+    <nav aria-label="Contact and resume">
+      <a href="mailto:elivince.timbas11@gmail.com">Email me</a>
+      <a href="https://www.linkedin.com/in/elivince-timbas-72a25936a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">View CV</a>
+    </nav>
+    <noscript><p>This portfolio’s interactive experience needs JavaScript. You can still contact me or view my CV above.</p></noscript>
+  </main>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('portfolio-fallback')?.remove();
+    }, { once: true });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
